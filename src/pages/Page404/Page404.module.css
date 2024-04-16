@@ -12,7 +12,6 @@
 }
 
 .btn {
-  text-decoration: none;
   color: var(--page404-btn-color);
   background-color: var(--page404-btn-bg-color);
   display: block;

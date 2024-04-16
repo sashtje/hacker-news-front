@@ -10,6 +10,9 @@
 
   --color-2692f1: #2692f1;
   --color-0669bf: #0669bf;
+
+  --color-5e8fde: #5e8fde;
+  --color-2862c0: #2862c0;
   /* fonts */
 
   --header-color: var(--color-white);
@@ -18,6 +21,15 @@
   --page404-btn-color: var(--color-white);
   --page404-btn-bg-color: var(--color-2692f1);
   --page404-btn-bg-hover-color: var(--color-0669bf);
+
+  --icon-color: var(--color-white);
+
+  --btn-icon-bg-color: var(--color-2692f1);
+  --btn-icon-bg-hover-color: var(--color-0669bf);
+
+  --postitem-color: var(--color-white);
+  --postitem-bg-color: var(--color-5e8fde);
+  --postitem-bg-hover-color: var(--color-2862c0);
 }
 
 *,

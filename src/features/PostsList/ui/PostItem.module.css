@@ -1,0 +1,39 @@
+.post {
+  display: block;
+  color: var(--postitem-color);
+  background-color: var(--postitem-bg-color);
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.post:hover {
+  background-color: var(--postitem-bg-hover-color);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.info {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date {
+  margin-top: 20px;
+}
+
+.nickname {
+  font-weight: bold;
+}

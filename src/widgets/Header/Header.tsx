@@ -12,7 +12,8 @@ export const Header = () => {
       <Link to={getRouteMain()}>
         <LogoIcon width={60} />
       </Link>
-      Hacker News
+
+      <h1>Hacker News</h1>
     </header>
   );
 };

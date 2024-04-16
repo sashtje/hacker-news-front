@@ -1,0 +1,14 @@
+.main {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.panel {
+  padding: 20px 0;
+}
+
+.btn_refresh {
+  margin-left: auto;
+}
