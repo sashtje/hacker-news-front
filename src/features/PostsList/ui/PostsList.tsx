@@ -1,35 +1,40 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef, memo } from "react";
+
+import { useAppDispatch, useAppSelector } from "shared/lib/hooks/redux";
 
 import { PostItem } from "./PostItem";
-import { Post } from "./type";
+import { fetchPostsList } from "../model/services/fetchPostsList";
+import { getPostsList } from "../model/selectors/getPostsList";
 
 import cls from "./PostsList.module.css";
 
-export const PostsList = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
+export const PostsList = memo(() => {
+  const posts = useAppSelector(getPostsList);
 
-  const fetchPosts = async () => {
-    try {
-      const response = await fetch("http://127.0.0.1:8000/api/v1/posts");
-      const data = await response.json();
-
-      setPosts(data);
-    } catch (e) {
-      if (e instanceof Error) {
-        console.log(e.message);
-      }
-    }
-  };
+  const dispatch = useAppDispatch();
+  const timerRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
-    fetchPosts();
-  }, []);
+    dispatch(fetchPostsList());
+
+    timerRef.current = setInterval(() => {
+      dispatch(fetchPostsList());
+    }, 60000);
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [dispatch]);
 
   return (
     <div className={cls.list}>
-      {posts.map((post) => (
-        <PostItem className={cls.post_item} key={post.id} post={post} />
+      {posts?.map((post) => (
+        <PostItem className={cls.post_item} key={post.id} postId={post.id} />
       ))}
     </div>
   );
-};
+});
+
+PostsList.displayName = "PostsList";

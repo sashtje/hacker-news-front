@@ -1,9 +1,11 @@
-import { PostsRefreshBtn } from "features/PostsRefreshBtn";
+import { memo } from "react";
+
+import { PostsRefreshBtn } from "widgets/PostsRefreshBtn";
 import { PostsList } from "features/PostsList";
 
 import cls from "./PostListPage.module.css";
 
-export const PostsListPage = () => {
+export const PostsListPage = memo(() => {
   return (
     <main className={cls.main}>
       <div className={cls.panel}>
@@ -13,4 +15,6 @@ export const PostsListPage = () => {
       <PostsList />
     </main>
   );
-};
+});
+
+PostsListPage.displayName = "PostsListPage";

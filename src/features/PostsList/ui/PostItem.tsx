@@ -1,15 +1,16 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 
 import { classNames } from "shared/lib/classnames";
 import { ReactComponent as RatingIcon } from "shared/assets/icons/rating.svg";
 
-import { Post } from "./type";
-
 import cls from "./PostItem.module.css";
+import { useAppSelector } from "shared/lib/hooks/redux";
+import { getPostById } from "../model/selectors/getPostsList";
 
 interface PostItemProps {
   className?: string;
-  post: Post;
+  postId: number;
 }
 
 const options: Intl.DateTimeFormatOptions = {
@@ -21,8 +22,11 @@ const options: Intl.DateTimeFormatOptions = {
   second: "numeric",
 };
 
-export const PostItem = (props: PostItemProps) => {
-  const { className, post } = props;
+export const PostItem = memo((props: PostItemProps) => {
+  const { className, postId } = props;
+
+  const post = useAppSelector((state) => getPostById(state, postId));
+
   const date = new Date(post.created_at).toLocaleString("en-US", options);
 
   return (
@@ -43,4 +47,6 @@ export const PostItem = (props: PostItemProps) => {
       <div className={cls.date}>{date}</div>
     </Link>
   );
-};
+});
+
+PostItem.displayName = "PostItem";

@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { routerConfig } from "./routerConfig";
 
-export const AppRouter = () => {
+export const AppRouter = memo(() => {
   return (
     <Routes>
       {routerConfig.map(({ element, path }) => (
@@ -10,4 +11,6 @@ export const AppRouter = () => {
       ))}
     </Routes>
   );
-};
+});
+
+AppRouter.displayName = "AppRouter";
