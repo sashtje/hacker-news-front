@@ -1,0 +1,25 @@
+.page404 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--page404-btn-color);
+  background-color: var(--page404-btn-bg-color);
+  display: block;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--page404-btn-bg-hover-color);
+}

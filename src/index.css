@@ -4,6 +4,20 @@
   font-size: 16px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
+  /* colors */
+  --color-white: #ffffff;
+
+  --color-2692f1: #2692f1;
+  --color-0669bf: #0669bf;
+  /* fonts */
+
+  --header-color: var(--color-white);
+  --header-bg-color: var(--color-2692f1);
+
+  --page404-btn-color: var(--color-white);
+  --page404-btn-bg-color: var(--color-2692f1);
+  --page404-btn-bg-hover-color: var(--color-0669bf);
 }
 
 *,
