@@ -5,10 +5,10 @@ import {
   getRoutePostsList,
   getRoutePost,
   getRouteNotFound,
-} from "../../../shared/const/router";
-import { PostsListPage } from "../../../pages/PostsListPage";
-import { PostPage } from "../../../pages/PostPage";
-import { Page404 } from "../../../pages/Page404";
+} from "shared/const/router";
+import { PostsListPage } from "pages/PostsListPage";
+import { PostPage } from "pages/PostPage";
+import { Page404 } from "pages/Page404";
 
 export const routerConfig = [
   {

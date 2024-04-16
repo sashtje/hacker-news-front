@@ -1,5 +1,5 @@
-import { PostsRefreshBtn } from "../../features/PostsRefreshBtn";
-import { PostsList } from "../../features/PostsList";
+import { PostsRefreshBtn } from "features/PostsRefreshBtn";
+import { PostsList } from "features/PostsList";
 
 import cls from "./PostListPage.module.css";
 

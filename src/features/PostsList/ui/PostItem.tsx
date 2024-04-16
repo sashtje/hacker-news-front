@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-import { classNames } from "../../../shared/lib/classnames";
+import { classNames } from "shared/lib/classnames";
+import { ReactComponent as RatingIcon } from "shared/assets/icons/rating.svg";
+
 import { Post } from "./type";
 
 import cls from "./PostItem.module.css";
-
-import { ReactComponent as RatingIcon } from "../../../shared/assets/icons/rating.svg";
 
 interface PostItemProps {
   className?: string;

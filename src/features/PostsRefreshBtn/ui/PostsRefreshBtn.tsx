@@ -1,6 +1,6 @@
-import { Button } from "../../../shared/ui/Button";
+import { Button } from "shared/ui/Button";
 
-import { ReactComponent as RefreshIcon } from "../../../shared/assets/icons/refresh.svg";
+import { ReactComponent as RefreshIcon } from "shared/assets/icons/refresh.svg";
 
 interface PostsRefreshBtnProps {
   className?: string;

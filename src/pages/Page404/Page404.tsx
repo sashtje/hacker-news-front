@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { getRouteMain } from "../../shared/const/router";
+import { getRouteMain } from "shared/const/router";
 
 import cls from "./Page404.module.css";
 

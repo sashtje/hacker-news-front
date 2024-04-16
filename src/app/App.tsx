@@ -1,4 +1,5 @@
-import { Header } from "../widgets/Header";
+import { Header } from "widgets/Header";
+
 import { AppRouter } from "./providers/router";
 
 import cls from "./App.module.css";
