@@ -1,11 +1,12 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 
+import { useAppSelector } from "shared/lib/hooks/redux";
+import { getRoutePost } from "shared/const/router";
 import { classNames } from "shared/lib/classnames";
 import { ReactComponent as RatingIcon } from "shared/assets/icons/rating.svg";
 
 import cls from "./PostItem.module.css";
-import { useAppSelector } from "shared/lib/hooks/redux";
 import { getPostById } from "../model/selectors/getPostsList";
 
 interface PostItemProps {
@@ -30,7 +31,10 @@ export const PostItem = memo((props: PostItemProps) => {
   const date = new Date(post.created_at).toLocaleString("en-US", options);
 
   return (
-    <Link className={classNames(cls.post, {}, [className])} to={""}>
+    <Link
+      className={classNames(cls.post, {}, [className])}
+      to={getRoutePost(post.id.toString())}
+    >
       <h2 className={cls.title}>{post.title}</h2>
 
       <div className={cls.info}>
