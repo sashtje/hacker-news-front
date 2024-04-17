@@ -1,0 +1,24 @@
+.link {
+  color: var(--page404-btn-color);
+  background-color: var(--page404-btn-bg-color);
+  display: inline-block;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.link:hover {
+  background-color: var(--page404-btn-bg-hover-color);
+}
+
+.icon svg {
+  width: 32px;
+  height: auto;
+  display: block;
+  fill: var(--icon-color);
+}
+
+.external {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}

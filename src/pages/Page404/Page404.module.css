@@ -8,17 +8,5 @@
 }
 
 .title {
-  font-size: 1.5rem;
-}
-
-.btn {
-  color: var(--page404-btn-color);
-  background-color: var(--page404-btn-bg-color);
-  display: block;
-  padding: 10px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: var(--page404-btn-bg-hover-color);
+  font-size: var(--title-font);
 }

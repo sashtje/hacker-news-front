@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useAppSelector } from "shared/lib/hooks/redux";
 import { getRoutePost } from "shared/const/router";
 import { classNames } from "shared/lib/classnames";
+import { getFormattedDate } from "shared/lib/getFormattedDate";
 import { ReactComponent as RatingIcon } from "shared/assets/icons/rating.svg";
 
 import cls from "./PostItem.module.css";
@@ -14,21 +15,16 @@ interface PostItemProps {
   postId: number;
 }
 
-const options: Intl.DateTimeFormatOptions = {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-};
-
 export const PostItem = memo((props: PostItemProps) => {
   const { className, postId } = props;
 
   const post = useAppSelector((state) => getPostById(state, postId));
 
-  const date = new Date(post.created_at).toLocaleString("en-US", options);
+  if (!post) {
+    return null;
+  }
+
+  const date = getFormattedDate(post.created_at);
 
   return (
     <Link

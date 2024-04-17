@@ -1,19 +1,7 @@
-.post {
-  display: block;
-  color: var(--postitem-color);
-  background-color: var(--postitem-bg-color);
-  padding: 20px;
-  transition: 0.3s;
-}
-
-.post:hover {
-  background-color: var(--postitem-bg-hover-color);
-}
-
 .title {
-  font-size: var(--title-font);
-  font-weight: bold;
   text-align: center;
+  font-weight: bold;
+  font-size: var(--title-font);
 }
 
 .info {
@@ -36,4 +24,8 @@
 
 .nickname {
   font-weight: bold;
+}
+
+.link {
+  margin-top: 50px;
 }

@@ -13,8 +13,11 @@
 
   --color-5e8fde: #5e8fde;
   --color-2862c0: #2862c0;
-  /* fonts */
 
+  /* fonts */
+  --font-24px: 24px;
+
+  /* colors in components */
   --header-color: var(--color-white);
   --header-bg-color: var(--color-2692f1);
 
@@ -30,6 +33,9 @@
   --postitem-color: var(--color-white);
   --postitem-bg-color: var(--color-5e8fde);
   --postitem-bg-hover-color: var(--color-2862c0);
+
+  /* fonts in components */
+  --title-font: var(--font-24px);
 }
 
 *,

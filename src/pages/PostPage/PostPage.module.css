@@ -6,10 +6,13 @@
 }
 
 .panel {
+  padding: 20px 0;
 }
 
 .post_details {
+  margin-top: 30px;
 }
 
 .comments_block {
+  margin-top: 50px;
 }

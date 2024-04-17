@@ -19,7 +19,12 @@ export const PostsRefreshBtn = memo((props: PostsRefreshBtnProps) => {
   }, [dispatch]);
 
   return (
-    <Button onClick={refreshPosts} className={className} variant="icon">
+    <Button
+      onClick={refreshPosts}
+      className={className}
+      variant="icon"
+      title="Refresh posts"
+    >
       <RefreshIcon />
     </Button>
   );
